@@ -6,15 +6,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins";
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightgrey;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 :root{
@@ -24,26 +17,44 @@ body {
     --color-fourth: #93B1A6;
 }
 
-.container-form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 500px;
-    width: 700px; 
-    
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0.4em;
 }
-.text{
-    background-color: var(--color-primary);
+nav ul{
+    display: none;
+    justify-content: space-between;
 }
-.information{
-    background-color: white;
+.burger{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
 }
 
-@media only screen and (min-width: 768px){
-
-    .container-form{
-
-        grid-template-rows: 1fr 1fr;
-
-    }
-
+.burger .bar, .burger:after, .burger::before{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 5px;
+    margin: 10px 0px;
+    background-color: #000000;
+    transition: 0.4s;
+}
+.bar{
+    opacity: 1;
+}
+.burger.active:before{
+    transform: rotate(-45deg) translate(-13px, 6px);
+}
+.burger.active:after{
+    transform: rotate(45deg) translate(-13px, -10px);
+}
+.burger.active .bar{
+    opacity: 0;
 }
