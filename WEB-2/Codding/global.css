@@ -26,6 +26,7 @@ nav{
     justify-content: space-between; 
     padding: 0.4em;
     margin-bottom: 15px;
+    padding: 0 20px 0 20px;
 }
 .menu-def{
     display: none;
@@ -131,6 +132,7 @@ nav{
     max-width: 80%;
     min-width: 80%;
     min-height: 40%;
+    max-height: 40%;
     background-color: #5c83743d;
 }
 .sendform{
@@ -144,10 +146,11 @@ nav{
     margin-top: 10px;
 }
 .contact-us{
-    width: 100%;
+    width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 10px;
+    font-size: calc(12px + 1vw);
 }
 .text{
     background-color: lightblue;
@@ -161,4 +164,34 @@ nav{
     background-color: white;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+}
+
+@media only screen and (min-width: 768px){
+    .menu-def{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .burger{
+        display: none;
+    }
+    .container-form{
+        flex-direction: row;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    .text{
+        flex: 2;
+        background-size: cover;
+        background-position: center;
+    }
+    .information{
+        flex: 3;
+        justify-content: center;
+        gap: 20px;
+        
+    }
+    .contact-us{
+        font-size: calc(6px + 1em);
+    }
 }
