@@ -26,7 +26,7 @@ public class GestionBanque {
         client[0].setNomClient("Batman");
 
         client[1].setNoClient(94821);
-        client[1].setNomClient("Rhoshandiatelly-neshiaunneveshenk Koyaanfsquatsiuty Williams");
+        client[1].setNomClient("Arnold Schwarzenegger");
 
         int nombre_de_compte = 3;
 
