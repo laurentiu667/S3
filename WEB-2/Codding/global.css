@@ -156,7 +156,7 @@ nav{
     background-color: lightblue;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-image: url(/building.avif);
+    background-image: url(./building.avif);
     background-size: 100%;
     background-repeat: no-repeat;
 }
