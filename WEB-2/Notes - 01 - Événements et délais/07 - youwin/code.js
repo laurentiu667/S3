@@ -1,19 +1,25 @@
 window.addEventListener("load", () => {
     let posY = -100;
-    let winNode = document.querySelector("#youwin")
+    let posX = -100;
+    let winNode = document.querySelector("#youwin");
+
     window.onmouseover = () => {
-        winNode.style.left = Math.random() * 
-        posY = Math
+        // Générez des positions aléatoires pour déplacer la div
+        posX = Math.random() * 120;
+        posY = Math.random() * 120;
+
+        // Appliquez les nouvelles positions
+        winNode.style.left = posX + "px";
+        winNode.style.top = posY + "px";
     }
 
-  
     const SPEED = 10;
     let counter = 0;
     let greenState = true;
-    const goDown = () => {
 
+    const goDown = () => {
         counter++;
-        winNode.style.tranform = "rotate(" + counter + ")"
+        winNode.style.tranform = "rotate(" + counter + "deg)";
         if (posY < 250){
             posY += SPEED;
         }
@@ -27,10 +33,5 @@ window.addEventListener("load", () => {
         winNode.style.top = posY + "px";
         setTimeout(goDown, 30);
     }
-
-
-
     goDown();
-
-
 })
