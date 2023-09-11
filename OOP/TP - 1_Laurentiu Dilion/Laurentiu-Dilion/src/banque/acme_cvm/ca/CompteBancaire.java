@@ -34,18 +34,19 @@ public class CompteBancaire {
     public int retrait(double montant) {
         if (this.solde >= montant && montant < this.limiteRetrait && montant >= 0.0) {
             this.solde -= montant;
-            return 0;
-        } else {
             return -1;
+        } else {
+            return 0;
         }
     }
 
     public int depot(double montant) {
         if (montant < 50000.0 && montant >= 0.0) {
             this.solde += montant;
-            return 0;
-        } else {
             return -1;
+        } else {
+
+            return 0;
         }
     }
 
