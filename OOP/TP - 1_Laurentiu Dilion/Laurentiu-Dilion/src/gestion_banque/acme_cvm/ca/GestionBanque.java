@@ -120,19 +120,6 @@ public class GestionBanque {
             System.out.println("Intérêt versé, le nouveau solde est $ " + compteBancaire[2].getSolde());
         }
 
-        if ((compteBancaire[0].versetInteret()) == -1){
-            System.out.println("Intérêt non versé sur compte chèque");
-        }
-        else if (compteBancaire[0].versetInteret() == 0) {
-            System.out.println("Intérêt versé, le nouveau solde est $ " + compteBancaire[0].getSolde());
-        }
-
-        if (compteBancaire[1].versetInteret() == -1){
-            System.out.println("Intérêt non versé sur compte chèque");
-        }
-        else if (compteBancaire[1].versetInteret() == 0) {
-            System.out.println("Intérêt versé, le nouveau solde est $ " + compteBancaire[1].getSolde());
-        }
         System.out.println("\n");
         for (int i = 0; i < nombre_de_compte; i++){
             System.out.println(
