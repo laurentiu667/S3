@@ -5,9 +5,11 @@ public class EchelleAugmentation {
     private double tauxAugNiv2;
 
     public void setNiveaux(double augNiv1, double augNiv2){
+        
 
     }
     public double tauxAugmentationParNiveau (){
+
 
         return
     }
