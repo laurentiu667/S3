@@ -1,5 +1,7 @@
 package application_rh1.acme_cvm.ca;
 
+import employes.acme_cvm.ca.EchelleAugmentation;
+import employes.acme_cvm.ca.EchelleSalariale;
 import employes.acme_cvm.ca.Employe;
 
 import java.io.PrintWriter;
@@ -17,32 +19,51 @@ public class ApplicationRH1 {
         employe1.setNomComplet("Albert Einstein");
         employe1.setSalaire(45_000);
         employe1.setAnneeEmbauche(2000);
-        compteEmployes++;
 
         employe2.setNomComplet("Marie Curie");
         employe2.setSalaire(74_000);
         employe2.setAnneeEmbauche(2010);
-        compteEmployes++;
+
+        compteEmployes += 2;
+        compteExperience += employe1.ancienneteParAnneeCible(anneeCible) + employe2.ancienneteParAnneeCible(anneeCible);
 
         System.out.println("**********************");
         System.out.println("EMPLOYES ET ANCIENNETE");
         System.out.println("**********************");
-        System.out.println("Salaire de " + employe1.getNomComplet() + "est de " + employe1.getSalaire());
-        System.out.println("Salaire de " + employe2.getNomComplet() + "est de " + employe2.getSalaire());
+        System.out.println("1. Salaire de " + employe1.getNomComplet() + " est de: " + employe1.getSalaire());
+        System.out.println("2. Salaire de " + employe2.getNomComplet() + " est de: " + employe2.getSalaire());
+        System.out.println("3. " + employe1.getNomComplet() + " a été embauché en " + employe1.getAnneeEmbauche());
+        System.out.println("4. " + employe1.getNomComplet() + " aura " + employe1.ancienneteParAnneeCible(anneeCible) + " ans d'ancienneté en " + anneeCible);
+        System.out.println("5. " + employe2.getNomComplet() + " a été embauché en " + employe2.getAnneeEmbauche());
+        System.out.println("6. Lorsque " + employe2.getNomComplet() + " aura " + ancienneteRetraite + " ans d'ancienneté, nous serons en " + employe2.anneeCiblePourAnciennete(ancienneteRetraite));
+        System.out.println("7. Le nombre total d'employés est de " + compteEmployes);
+        System.out.println("8. Le nombre total d'années d'expérience des employés de l'entreprise est de " + compteExperience);
 
-        System.out.println(employe1.getNomComplet() + " a ete embaucher en " + employe1.getAnneeEmbauche());
-        System.out.println(employe1.getNomComplet() + " aura " + employe1.ancienneteParAnneeCible(anneeCible) + " en " + anneeCible);
-        System.out.println(employe2.getNomComplet() + "a ete embaucher en " + employe2.getAnneeEmbauche());
-        System.out.println("Lorsque " + employe2.getNomComplet() + " aura " + ancienneteRetraite + " ans " + " d anciennete, nous seront en " + employe2.anneeCiblePourAnciennete(ancienneteRetraite));
-        System.out.println("Le nombre total d'employés est de" + compteEmployes);
+        EchelleSalariale echelleSalariale = new EchelleSalariale();
+        EchelleAugmentation echelleAugmentation = new EchelleAugmentation();
 
+        // Définition des taux d'augmentation pour les niveaux
+        echelleAugmentation.setNiveaux(0.02, 0.03);
 
-        System.out.println("Le nombre total d'années d'expérience des employés de l'entreprise est de " + (employe1.ancienneteParAnneeCible(anneeCible) + employe2.ancienneteParAnneeCible(anneeCible)));
-
-
-
-
-
-
+        // Affichage des informations sur les échelles salariales et les taux d'augmentation
+        System.out.println("\n******************************************");
+        System.out.println(" ECHELLE SALARIALE ET TAUX D'AUGMENTATION");
+        System.out.println("******************************************");
+        System.out.println("1. Le salaire maximum pour le niveau 1 est de " + echelleSalariale.salaireMaxParSalaire(1));
+        System.out.println("2. Le salaire maximum pour le niveau 2 est de " + echelleSalariale.salaireMaxParSalaire(2));
+        System.out.println("3. Le salaire maximum pour un employe qui gagne $40 000.00 est de " + echelleSalariale.salaireMaxParSalaire(40000));
+        System.out.println("4. Le salaire maximum pour un employe qui gagne $50 000.00 est de " + echelleSalariale.salaireMaxParSalaire(50000));
+        System.out.println("5. Le salaire maximum pour " + employe1.getNomComplet() + " est de " + echelleSalariale.salaireMaxParSalaire(employe1.getSalaire()));
+        System.out.println("6. Le salaire maximum pour " + employe2.getNomComplet() + " est de " + echelleSalariale.salaireMaxParSalaire(employe2.getSalaire()));
+        System.out.println("7. Le taux d'augmentation annuelle pour un employé de niveau 1 est de " + echelleAugmentation.tauxAugmentationParNiveau(1));
+        System.out.println("8. Le taux d'augmentation annuelle pour un employé de niveau 2 est de " + echelleAugmentation.tauxAugmentationParNiveau(2));
+        System.out.println("9. Le taux d'augmentation annuelle d'un employé qui gagne $40,000.00 est de " + echelleAugmentation.tauxAugmentationParSalaire(40000));
+        System.out.println("10. Le taux d'augmentation annuelle d'un employé qui gagne $50,000.00 est de " + echelleAugmentation.tauxAugmentationParSalaire(50000));
+        System.out.println("11. Le taux d'augmentation annuelle de " + employe1.getNomComplet() + " est de " + echelleAugmentation.tauxAugmentationParSalaire(employe1.getSalaire()));
+        System.out.println("12. Le taux d'augmentation annuelle de " + employe2.getNomComplet() + " est de " + echelleAugmentation.tauxAugmentationParSalaire(employe2.getSalaire()));
     }
 }
+
+
+
+
