@@ -1,10 +1,8 @@
 package application_rh1.acme_cvm.ca;
 
-import employes.acme_cvm.ca.EchelleAugmentation;
-import employes.acme_cvm.ca.EchelleSalariale;
+import utils_rh.acme_cvm.ca.EchelleAugmentation;
+import utils_rh.acme_cvm.ca.EchelleSalariale;
 import employes.acme_cvm.ca.Employe;
-
-import java.io.PrintWriter;
 
 public class ApplicationRH1 {
     public static void main(String[] args) {
@@ -42,10 +40,8 @@ public class ApplicationRH1 {
         EchelleSalariale echelleSalariale = new EchelleSalariale();
         EchelleAugmentation echelleAugmentation = new EchelleAugmentation();
 
-        // Définition des taux d'augmentation pour les niveaux
         echelleAugmentation.setNiveaux(0.02, 0.03);
 
-        // Affichage des informations sur les échelles salariales et les taux d'augmentation
         System.out.println("\n******************************************");
         System.out.println(" ECHELLE SALARIALE ET TAUX D'AUGMENTATION");
         System.out.println("******************************************");
@@ -61,6 +57,10 @@ public class ApplicationRH1 {
         System.out.println("10. Le taux d'augmentation annuelle d'un employé qui gagne $50,000.00 est de " + echelleAugmentation.tauxAugmentationParSalaire(50000));
         System.out.println("11. Le taux d'augmentation annuelle de " + employe1.getNomComplet() + " est de " + echelleAugmentation.tauxAugmentationParSalaire(employe1.getSalaire()));
         System.out.println("12. Le taux d'augmentation annuelle de " + employe2.getNomComplet() + " est de " + echelleAugmentation.tauxAugmentationParSalaire(employe2.getSalaire()));
+
+
+
+
     }
 }
 

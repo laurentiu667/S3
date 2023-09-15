@@ -1,4 +1,4 @@
-package employes.acme_cvm.ca;
+package utils_rh.acme_cvm.ca;
 
 public class EchelleSalariale {
 
