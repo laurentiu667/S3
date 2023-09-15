@@ -1,5 +1,6 @@
-const validate = () => {
 
+const validate = () => {
+    console.log(23432);
     let nom = document.querySelector("#nompinput").value;
     let motDepasse = document.querySelector("#mdpinput").value;
 
@@ -27,21 +28,19 @@ const validate = () => {
 }
 
 window.addEventListener("load", () => {
-    
-    const videoOnclick = document.querySelector("video")
-    const bodyy = document.querySelector("#booody")
+    const videoOnclick = document.querySelector("video");
+    const bodyy = document.querySelector("#booody");
 
-    
-        videoOnclick.onplay = () => {
-            bodyy.style.backgroundColor = "#555"
+    videoOnclick.onplay = () => {
+        bodyy.style.backgroundColor = "#555";
+    };
 
-        }
-        
-        videoOnclick.onpause = () => {
-            bodyy.style.backgroundColor = "white"
-        }
+    videoOnclick.onpause = () => {
+        bodyy.style.backgroundColor = "white";
+    };
 
-        videoOnclick.onended = () => {
-            window.location.replace = "./generique.html"
-        }
- })
+    videoOnclick.onended = () => {
+        window.location.href = "./generique.html";
+    };
+
+});
