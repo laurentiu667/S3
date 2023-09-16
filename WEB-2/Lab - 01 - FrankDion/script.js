@@ -1,5 +1,6 @@
-const validate = () => {
 
+const validate = () => {
+    console.log(23432);
     let nom = document.querySelector("#nompinput").value;
     let motDepasse = document.querySelector("#mdpinput").value;
 
@@ -32,6 +33,7 @@ const validate = () => {
 window.addEventListener("load", () => {
     const videoOnclick = document.querySelector("video");
     const bodyy = document.querySelector("#booody");
+<<<<<<< HEAD
     const generic = document.querySelectorAll(".generic");
 
     videoOnclick.onplay = () => {
@@ -76,4 +78,19 @@ function moveGeneric() {
 window.addEventListener("load", () => {
     // Call moveGeneric() initially
     moveGeneric();
+=======
+
+    videoOnclick.onplay = () => {
+        bodyy.style.backgroundColor = "#555";
+    };
+
+    videoOnclick.onpause = () => {
+        bodyy.style.backgroundColor = "white";
+    };
+
+    videoOnclick.onended = () => {
+        window.location.href = "./generique.html";
+    };
+
+>>>>>>> 51c9a38073914ee9e86bca35eadb847bccf64579
 });
