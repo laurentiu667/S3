@@ -6,9 +6,9 @@ window.addEventListener("load", () => {
 
     function moveGeneric() {
         if (moveUp) {
-            currentTop -=1;
+            currentTop +=1;
         } else {
-            currentTop += 1;
+            currentTop -= 1;
         }
 
         genericDiv.style.top = currentTop + "px";
