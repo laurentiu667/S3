@@ -33,7 +33,6 @@ const validate = () => {
 window.addEventListener("load", () => {
     const videoOnclick = document.querySelector("video");
     const bodyy = document.querySelector("#booody");
-<<<<<<< HEAD
     const generic = document.querySelectorAll(".generic");
 
     videoOnclick.onplay = () => {
@@ -78,7 +77,7 @@ function moveGeneric() {
 window.addEventListener("load", () => {
     // Call moveGeneric() initially
     moveGeneric();
-=======
+
 
     videoOnclick.onplay = () => {
         bodyy.style.backgroundColor = "#555";
@@ -92,5 +91,4 @@ window.addEventListener("load", () => {
         window.location.href = "./generique.html";
     };
 
->>>>>>> 51c9a38073914ee9e86bca35eadb847bccf64579
 });

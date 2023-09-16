@@ -28,15 +28,16 @@ public class EchelleAugmentation {
     }
 
     public double salaireAugmente(double salaire){
-        
+        int niveau = new EchelleSalariale().trouveNiveau(salaire);
+        double tauxAugmentation = tauxAugmentationParNiveau(niveau);
+        return salaire + (salaire * tauxAugmentation);
     }
 
     public double salaireAugmentePlafonne(double salaire){
-
-        if (salaireAugmente(salaire) >= ){
-
-        } else {
-            return (salaire + salaireAugmente(salaire));
-        }
+        int niveau = new EchelleSalariale().trouveNiveau(salaire);
+        double tauxAugmentation = tauxAugmentationParNiveau(niveau);
+        double salaireAugmente = salaire + (salaire * tauxAugmentation);
+        double salaireMax = new EchelleSalariale().salaireMaxParSalaire(salaire);
+        return Math.min(salaireAugmente, salaireMax);
     }
 }

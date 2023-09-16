@@ -2,13 +2,13 @@ window.addEventListener("load", () => {
     const genericDiv = document.querySelector(".generic"); 
     
     let currentTop = 600;
-    let moveUp = true;
-
+    let moveUp = false;
+    // Faut mettre le generic en position relative 
     function moveGeneric() {
         if (moveUp) {
-            currentTop +=1;
+            currentTop--;
         } else {
-            currentTop -= 1;
+            currentTop++;
         }
 
         genericDiv.style.top = currentTop + "px";

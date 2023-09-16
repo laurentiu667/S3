@@ -27,7 +27,7 @@ public class ApplicationRH1 {
 
         System.out.println("**********************");
         System.out.println("EMPLOYES ET ANCIENNETE");
-        System.out.println("**********************");
+        System.out.println("**********************\n");
         System.out.println("1. Salaire de " + employe1.getNomComplet() + " est de: " + employe1.getSalaire());
         System.out.println("2. Salaire de " + employe2.getNomComplet() + " est de: " + employe2.getSalaire());
         System.out.println("3. " + employe1.getNomComplet() + " a été embauché en " + employe1.getAnneeEmbauche());
@@ -44,7 +44,7 @@ public class ApplicationRH1 {
 
         System.out.println("\n******************************************");
         System.out.println(" ECHELLE SALARIALE ET TAUX D'AUGMENTATION");
-        System.out.println("******************************************");
+        System.out.println("******************************************\n");
         System.out.println("1. Le salaire maximum pour le niveau 1 est de " + echelleSalariale.salaireMaxParSalaire(1));
         System.out.println("2. Le salaire maximum pour le niveau 2 est de " + echelleSalariale.salaireMaxParSalaire(2));
         System.out.println("3. Le salaire maximum pour un employe qui gagne $40 000.00 est de " + echelleSalariale.salaireMaxParSalaire(40000));
@@ -58,6 +58,19 @@ public class ApplicationRH1 {
         System.out.println("11. Le taux d'augmentation annuelle de " + employe1.getNomComplet() + " est de " + echelleAugmentation.tauxAugmentationParSalaire(employe1.getSalaire()));
         System.out.println("12. Le taux d'augmentation annuelle de " + employe2.getNomComplet() + " est de " + echelleAugmentation.tauxAugmentationParSalaire(employe2.getSalaire()));
 
+        System.out.println("\n*********************************");
+        System.out.println("AUGMENTATION DE SALAIRE ANNUELLES");
+        System.out.println("*********************************\n");
+
+        double salaireAugmente1 = echelleAugmentation.salaireAugmente(employe1.getSalaire());
+        double salaireAugmentePlafonne1 = echelleAugmentation.salaireAugmentePlafonne(employe1.getSalaire());
+        double salaireAugmente2 = echelleAugmentation.salaireAugmente(employe2.getSalaire());
+        double salaireAugmentePlafonne2 = echelleAugmentation.salaireAugmentePlafonne(employe2.getSalaire());
+
+        System.out.println("1. Le salaire actuel de " + employe1.getNomComplet() + " est de " + employe1.getSalaire() + " et son salaire + augmentation serait de " + salaireAugmente1);
+        System.out.println("2. Le salaire actuel de " + employe1.getNomComplet() + " est de " + employe1.getSalaire() + " et son salaire + augmentation plafonnée sera de " + salaireAugmentePlafonne1);
+        System.out.println("3. Le salaire actuel de " + employe2.getNomComplet() + " est de " + employe2.getSalaire() + " et son salaire + augmentation serait de " + salaireAugmente2);
+        System.out.println("4. Le salaire actuel de " + employe2.getNomComplet() + " est de " + employe2.getSalaire() + " et son salaire + augmentation plafonnée sera de " + salaireAugmentePlafonne2);
 
 
 
