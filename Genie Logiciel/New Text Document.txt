@@ -21,3 +21,23 @@ Quelles sont les deux regles pour la planning globale: ordonner par ordre dimpo 
 Time boxing : date limite, livrer a temps
 
 namespace = espace reserver en memoir pour des noms
+
+Mcintosh l'un des premiers ordinateurs
+
+fenete = element de bureau - elle permet de voir une section qui a ete rendu publique dans le programme.
+
+The machine that change the world
+
+2 eme forme d importation = import
+
+L autre forme est de : from tkinter import *
+
+widget text = full traitement de texte, changer le texte couleur etc -> T = Text(root, bg, fg, bd, height, width, font, ..)
+
+canva = w = Canvas ( master, option=value, ... )
+
+
+
+tag un tuples indeterminer chaine de texte relier de l info a l objet qu on dessine, etiquette qu on associe a des objets qu on peut rechercher grace a cette etiquette
+ 
+pillow 
