@@ -1,38 +1,31 @@
 window.addEventListener("load", () => {
-
     const boite = document.querySelector(".the-box");
 
-    const SPEED = 2;
+    const SPEED = 50; 
 
-    let cliquer = false;
+    let x = 0;
+    let y = 0;
 
-    const x = 40, y = 70;
-
-    let decalage_pixel = 0;
+    let clickx = 0;
+    let clicky = 0;
 
     function moveBox() {
-        if (cliquer){
-            decalage_pixel--;
-        } 
-        else {
-            decalage_pixel++;
-        }
         
+        x += (clickx - x) / SPEED;
+        y += (clicky - y) / SPEED;
         
-        boite.style.left = decalage_pixel + "px"; 
-    
-    
-       
+
+        boite.style.left = x + "px";
+        boite.style.top = y + "px";
     }
-    // si tu met le setInteval dans addEvenLister ca vas juste concatener la vitesse
-    setInterval(moveBox, 30) 
+
     
-    boite.addEventListener('click', () => {
-          
-        cliquer = !cliquer;
+    setInterval(moveBox, 0); 
+
+    document.addEventListener('click', (event) => {
+        clickx = event.clientX; 
+        clicky = event.clientY; 
+       
        
     });
-    
-
-
-})
+});
