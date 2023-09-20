@@ -18,7 +18,6 @@ window.addEventListener("load", () => {
         boite.style.left = x + "px";
         boite.style.top = y + "px";
     }
-
     
     setInterval(moveBox, 0); 
 
