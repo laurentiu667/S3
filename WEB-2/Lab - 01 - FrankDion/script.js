@@ -1,4 +1,8 @@
 
+
+//function validate() {}
+
+// type de fonction
 const validate = () => {
     console.log(23432);
     let nom = document.querySelector("#nompinput").value;
