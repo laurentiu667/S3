@@ -1,47 +1,35 @@
 const validation = () => {
-
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
 
-    const divErrors = document.createElement("errors");
+    const errorContainer = document.querySelector("errorContainer"); 
 
-    divErrors.className = "errors";
-
-
+  
+    errorContainer.innerHTML = ''; 
+    console.log(3423);
     let errors = [];
 
-    if (name.length >= 40){
-        errors.push("Votre nom est trop long veuillez abbreger");
+    if (name.length >= 40) {
+        errors.push("Votre nom est trop long, veuillez l'abréger.");
     }
 
-    if (name.length < 2){
-        errors.push("Votre nom est trop court");
-    }
-    
-    else if (name.match(/^[!@#$%^&*()_+{}:"<>?|]*$/)){
-        errors.push("Votre nom contient des caracteres non accepter ex : !@&^$#*(")
+    if (name.length < 2) {
+        errors.push("Votre nom est trop court.");
+    } else if (name.match(/^[!@#$%^&*()_+{}:"<>?|]*$/)) {
+        errors.push("Votre nom contient des caractères non acceptés, par exemple : !@#$%^&*()_+{}:");
     }
 
-    if (!email.includes("@")){
-
-        errors.push("Il se peut qu il vous manque : @ ou adresse email invalide");
+    if (!email.includes("@")) {
+        errors.push("Il se peut qu'il vous manque le caractère '@' ou que l'adresse email soit invalide.");
     }
 
-    if(errors.length > 0 ){
+    if (errors.length > 0) {
         let message = "Vous avez des erreurs";
         errors.forEach(err => {
-            message += "\n - " + err;
-            alert(message);
-        })
+            message += "<br/> - " + err; 
+        });
+        errorContainer.innerHTML = message; 
+       
     }
-    
-}
 
-
-const menu = document.querySelector(".burger")
-const slide = document.querySelector(".menu-def")
-
-menu.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    slide.classList.toggle('active');
-})
+};
