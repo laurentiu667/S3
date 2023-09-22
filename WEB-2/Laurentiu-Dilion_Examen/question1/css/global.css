@@ -62,6 +62,6 @@ button {
 
 .line > :first-child {
     width: 45%;
-    text-align: right;
+    text-align: end;
     padding-right: 10px;
 }

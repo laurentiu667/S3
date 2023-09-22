@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Poppins";
+    margin: 0 auto;
+    min-width: 90px;
+    background-color: rgb(255, 66, 66);
+}
+
+.wrapper{
+    max-width: 80%;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.13);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.wrapper > :first-child{
+    font-size: 5vw;
+    padding-top: 40px;
+    color: white;
+    -webkit-text-stroke: 0.5px black
+}
+
+.text-container {
+    border: 2px solid black; /* Black border around the text */
+    display: grid;
+    place-items: center;
+}
+.ajouter_confirmer{
+    display: flex;
+    gap: 20px;
+    margin-top: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.button_conf{
+    height: 32px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid black;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.ajouter_grid_code{
+    width: calc(150px + 1vh);
+    height: 30px;
+    background-color: rgba(173, 0, 0, 0.24);
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    border: 1px solid black;
+    border-radius: 2px;
+   
+}
+.ajouter_grid_code button {
+    border: none;
+    font-size: calc(20px);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.ajouter_plus_moins{
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+.wrapper-code {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+    gap: 3px; margin-bottom: 20px;
+
+}
+
+.carrer_char {
+    display: grid;
+    place-items: center;
+    width: 100px; /* Ajoutez la largeur souhaitée pour les carrés ici */
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    height: 100px;
+    background-color: white;
+    border: 3px solid black;
+    font-size: calc(30px);
+}
+
+.generer, .reinitialiser{
+    width: 200px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 15px;
+    display: none;
+}
+.avant_wrapper_code{
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    border: 3px solid black;
+    display: grid;
+    place-items: start;
+}
+
+@media only screen and (min-width: 600px) {
+    .wrapper > :first-child{
+        font-size: 2vw;
+        
+    }
+  }
