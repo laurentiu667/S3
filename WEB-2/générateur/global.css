@@ -13,7 +13,7 @@ body{
 
 .wrapper{
     max-width: 80%;
-    height: 700px;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.13);
     margin: 0 auto;
     display: flex;

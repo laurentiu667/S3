@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
             console.log(i);
             setTimeout(() => {
                 generateur(ajouter_totalValue); 
-            }, 50 * i);
+            }, 10 * i);
         }
         reinitialiser.style.display = "inline";
 
