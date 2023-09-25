@@ -16,8 +16,8 @@ body{
 }
 
 .wrapper{
-    max-width: 80%;
-    height: 100vh;
+    max-width: 80vw;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.13);
     margin: 0 auto;
     display: flex;
@@ -26,7 +26,9 @@ body{
 }
 .wrapper > :first-child{
     font-size: 5vw;
-    padding-top: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
     color: white;
     -webkit-text-stroke: 0.5px black
 }
@@ -35,6 +37,8 @@ body{
     border: 2px solid black; 
     display: grid;
     place-items: center;
+    font-size: 20px;
+    min-height: 40px;
 }
 .ajouter_confirmer{
     display: flex;
@@ -49,9 +53,16 @@ body{
     border: none;
     width: 100px;
     cursor: pointer;
-    border: 1px solid black;
+    border: 2px solid black;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.37);
     font-weight: bold;
     border-radius: 2px;
+}
+.button_conf:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+
 }
 .ajouter_grid_code{
     width: calc(150px + 1vh);
@@ -59,7 +70,7 @@ body{
     background-color: rgba(173, 0, 0, 0.24);
     display: grid;
     grid-template-columns: 30px 1fr 30px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 2px;
    
 }
@@ -96,14 +107,17 @@ body{
     height: 100px;
     background-color: white;
     border: 3px solid black;
-    font-size: calc(30px);
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .generer, .reinitialiser{
+    background-color: rgba(173, 0, 0, 0.24);
     width: 200px;
     height: 40px;
     border-radius: 2px;
-    border: 1px solid black;
+    color: white;
+    border: 2px solid black;
     font-weight: bold;
     font-size: 15px;
     display: none;

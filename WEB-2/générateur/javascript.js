@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
     
     generer.addEventListener('click', () => {
         const ajouter_totalValue = parseInt(ajouter_total.textContent); 
-        for (let i = 1; i <= 20; i++) {
+        for (let i = 1; i <= 100; i++) {
             console.log(i);
             setTimeout(() => {
                 generateur(ajouter_totalValue); 
@@ -75,6 +75,5 @@ window.addEventListener("load", () => {
         avant_wrapper_code.style.display = "block";
       
     });
-    
     
 });
