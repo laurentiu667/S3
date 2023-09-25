@@ -32,6 +32,7 @@ window.addEventListener("load", () => {
         const ajouter_totalValue = parseInt(ajouter_total.textContent);
     
         if (ajouter_totalValue > 0) {
+            console.log(234);
             for (let i = 0; i < ajouter_totalValue; i++) {
                 const newDiv = document.createElement("div");
                 newDiv.classList.add("carrer_char");
