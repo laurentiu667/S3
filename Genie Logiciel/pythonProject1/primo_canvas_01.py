@@ -99,7 +99,8 @@ class Vue():
                                     fill="red")
 
 class Bille():
-    def __init__(self, parent, x, y, taille, couleur, vitesse, angle, cx, cy):
+
+    def __init__(self, parent, x, y, taille, couleur):
         self.parent = parent
         self.x = x
         self.y = y
@@ -108,10 +109,10 @@ class Bille():
         self.cible = [0, 0]
 
         self.couleur = couleur
-        self.vitesse = vitesse
-        self.angle = angle
-        self.cx = cx
-        self.cy = cy
+        self.vitesse = None
+        self.angle = None
+        self.cx = None
+        self.cy = None
 
         def creer_cible(self):
             n = 12;
@@ -122,7 +123,12 @@ class Bille():
 
         def deplacer(self):
             for i in self.cible:
-                distance = hp.calcDistance(i.x - self.x, i.y - self.y, )
+                deplacer = hp.calcDistance(self.x, self.y, self.cible[0], self.cible[1])
+                self.angle = hp.calcAngle(self.x, self.y, self.cible[0], self.cible[1])
+                self.cx, self.cy = hp.getAngledPoint(self.angle, deplacer, self.x, self.y)
+
+        def jouer_coup(self):
+            deplacer()
 
 
 class Modele():
@@ -143,17 +149,16 @@ class Modele():
             bille = Bille(self, x, y, taille, couleur)
             self.billes.append(bille)
 
-
-
-
-
 class Controleur():
     def __init__(self):
         self.modele = Modele(self)
         self.vue = Vue(self, self.modele)
+        self.vue.root.after(100)
+        c.vue.root.mainloop()
         self.vue.afficher_billes()
+        print(c, c.modele, c.vue)
+
 
 if __name__ == '__main__':
     c = Controleur()
-    c.vue.root.mainloop()
-    print(c, c.modele, c.vue)
+
