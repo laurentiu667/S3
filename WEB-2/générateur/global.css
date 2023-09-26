@@ -17,7 +17,7 @@ body{
 
 .wrapper{
     max-width: 80vw;
-    min-height: 100vh;
+
     background-color: rgba(0, 0, 0, 0.13);
     margin: 0 auto;
     display: flex;
@@ -26,7 +26,8 @@ body{
 }
 .wrapper > :first-child{
     font-size: 5vw;
-    height: 40px;
+ 
+    height: 60px;
     display: grid;
     place-items: center;
     color: white;

@@ -56,7 +56,7 @@ public class Employe {
     }
 
     public int joursVacances() {
-        char premierChiffre = String.valueOf("32").charAt(0);
+        char premierChiffre = numero.charAt(0);
         int joursDeVacances = 0;
 
         switch (premierChiffre) {
@@ -77,7 +77,6 @@ public class Employe {
         }
         return joursDeVacances;
     }
-
     public void heuresSup(double heuresSupplementaires) {
         nbreHeuresSemaine += heuresSupplementaires;
     }

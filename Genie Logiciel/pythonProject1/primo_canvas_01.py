@@ -9,7 +9,7 @@ class Vue():
         self.canevas = Canvas(self.root,
                               width=self.modele.largeur,
                               height=self.modele.hauteur,
-                              bg="Salmon")
+                              bg="grey")
         self.canevas.pack()
 
         self.creer_boules()
@@ -19,8 +19,9 @@ class Vue():
         for i in range(12):
             x = random.randrange(self.modele.largeur)
             y = random.randrange(self.modele.hauteur)
-            taille = int(random.randrange(20, 30) /2)
-            self.canevas.create_oval(x + taille, y + taille, x - taille, y - taille, fill="red")
+            taille = int(random.randrange(100, 140) / 2)
+            self.canevas.create_oval(x + taille, y + taille, x - taille, y - taille, fill="black")
+            self.canevas.create_rectangle(400,100,700,300, fill="blue")
 
 
 class Modele():
