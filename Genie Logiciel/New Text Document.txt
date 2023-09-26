@@ -41,3 +41,5 @@ canva = w = Canvas ( master, option=value, ... )
 tag un tuples indeterminer chaine de texte relier de l info a l objet qu on dessine, etiquette qu on associe a des objets qu on peut rechercher grace a cette etiquette
  
 pillow 
+
+Dans la machine faut pas codder faut faire en sorte de donner les details algorythmes

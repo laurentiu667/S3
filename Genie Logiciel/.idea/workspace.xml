@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbd3f0d3-7111-4d83-84aa-a0cfcf8ce3b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pythonProject1/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Genie Logiciel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Genie Logiciel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Text Document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/New Text Document.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pythonProject1/primo_canvas_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject1/primo_canvas_01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/TP2 - Laurentiu_Dilion/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/TP2 - Laurentiu_Dilion/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/TP2 - Laurentiu_Dilion/src/employe_salaire/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/TP2 - Laurentiu_Dilion/src/employe_salaire/Employe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB-2/générateur/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB-2/générateur/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB-2/générateur/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB-2/générateur/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,21 +20,53 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2VapmtxRroIbPbrGGqqFsEw08Tc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pythonProject1" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="X:\S3\Genie Logiciel\pythonProject1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="primo_canvas_01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Genie Logiciel" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pythonProject1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pythonProject1/primo_canvas_01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.primo_canvas_01" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,5 +77,16 @@
       <updated>1695084207862</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
