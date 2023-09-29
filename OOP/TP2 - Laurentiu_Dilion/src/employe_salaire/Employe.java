@@ -1,5 +1,7 @@
 package employe_salaire;
 
+import validation.ValidationFormulaire;
+
 public class Employe {
 
     private String nom;
@@ -10,13 +12,13 @@ public class Employe {
 
     // Constantes
     private final double ASSURANCE_EMPLOI = 0.111;
-    private final double FONDS_DE_PENSIONS = 0.136;
+    private final double FONDS_DE_PENSIONS = 0.0136;
     private final double COTISATION_SYNDICALE = 20;
     private final double FEDERAL = 0.19;
     private final double PROVINCIAL = 0.20;
 
     public void setEmploye(String nom, String numero, double salaireHoraire, double nbreHeuresSemaine, int anciennete) {
-        if (true) {
+        if (ValidationFormulaire.validerEmploye(nom, numero, salaireHoraire, nbreHeuresSemaine, anciennete)) {
             this.nom = nom;
             this.numero = numero;
             this.salaireHoraire = salaireHoraire;
@@ -61,16 +63,16 @@ public class Employe {
 
         switch (premierChiffre) {
             case '1':
-                joursDeVacances = 5;
+                joursDeVacances = 5 + anciennete;
                 break;
             case '2':
-                joursDeVacances = 10;
+                joursDeVacances = 10 + anciennete;
                 break;
             case '3':
-                joursDeVacances = 15;
+                joursDeVacances = 15 + anciennete;
                 break;
             case '4':
-                joursDeVacances = 20;
+                joursDeVacances = 20 + anciennete;
                 break;
             default:
                 break;

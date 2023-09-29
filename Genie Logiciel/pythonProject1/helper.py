@@ -1,9 +1,9 @@
 import math
 
 class Helper(object):
-    def getAngledPoint(angle,longueur,cx,cy):
-        x = (math.cos(angle)*longueur)+cx
-        y = (math.sin(angle)*longueur)+cy
+    def getAngledPoint(angle,vitesse,cx,cy):
+        x = (math.cos(angle)*vitesse)+cx
+        y = (math.sin(angle)*vitesse)+cy
         return (x,y)
     getAngledPoint = staticmethod(getAngledPoint)
     

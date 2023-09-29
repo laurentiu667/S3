@@ -79,7 +79,6 @@ couleurs = ['snow', 'ghost white', 'white smoke', 'gainsboro', 'floral white', '
                     'gray84', 'gray85', 'gray86', 'gray87', 'gray88', 'gray89', 'gray90', 'gray91', 'gray92',
                     'gray93', 'gray94', 'gray95', 'gray97', 'gray98', 'gray99']
 
-
 class Vue():
     def __init__(self, parent, modele):
         self.parent = parent
@@ -92,44 +91,49 @@ class Vue():
         self.canevas.pack()
 
     def afficher_billes(self):
-        for i in self.modele.billes:
-            taille = int(random.randrange(20, 50) / 2)
-            self.canevas.create_oval(i.x - i.taille, i.y - i.taille,
-                                    i.x + i.taille, i.y + i.taille,
-                                    fill="red")
+        self.canevas.delete(ALL)
+
+        for bille in self.modele.billes:
+            self.canevas.create_oval(bille.x - bille.taille, bille.y - bille.taille,bille.x + bille.taille, bille.y + bille.taille, fill=bille.couleur)
+
+    def afficher_cibles(self):
+        for bille in self.modele.billes:
+            cible_x, cible_y = bille.cible
+            cible_taille = bille.taille
+            self.canevas.create_oval(cible_x - cible_taille, cible_y - cible_taille, cible_x + cible_taille, cible_y + cible_taille, fill="grey")
 
 class Bille():
-
     def __init__(self, parent, x, y, taille, couleur):
         self.parent = parent
         self.x = x
         self.y = y
         self.taille = taille
-
-        self.cible = [0, 0]
-
         self.couleur = couleur
-        self.vitesse = None
+        self.vitesse = 1
         self.angle = None
         self.cx = None
         self.cy = None
+        self.cible = self.creer_cible()
 
-        def creer_cible(self):
-            n = 12;
-            for i in range(n):
-                x = random.randrange(self.largeur)
-                y = random.randrange(self.hauteur)
-                return x, y
+    def creer_cible(self):
+        x = random.randrange(self.parent.largeur)
+        y = random.randrange(self.parent.hauteur)
+        return x, y
 
-        def deplacer(self):
-            for i in self.cible:
-                deplacer = hp.calcDistance(self.x, self.y, self.cible[0], self.cible[1])
-                self.angle = hp.calcAngle(self.x, self.y, self.cible[0], self.cible[1])
-                self.cx, self.cy = hp.getAngledPoint(self.angle, deplacer, self.x, self.y)
+    def deplacer(self):
+        if self.cible != (self.x, self.y):
+            deplacement = hp.calcDistance(self.x, self.y, self.cible[0], self.cible[1])
+            self.angle = hp.calcAngle(self.x, self.y, self.cible[0], self.cible[1])
+            if deplacement > self.vitesse:
+                self.cx, self.cy = hp.getAngledPoint(self.angle, self.vitesse, self.x, self.y)
+            else:
+                self.cx, self.cy = self.cible
+            self.x, self.y = self.cx, self.cy
+        else:
+            self.cible = self.creer_cible()
 
-        def jouer_coup(self):
-            deplacer()
-
+    def jouer_coup(self):
+        self.deplacer()
 
 class Modele():
     def __init__(self, parent):
@@ -140,12 +144,12 @@ class Modele():
         self.creer_billes()
 
     def creer_billes(self):
-        n = 12
+        n = 5
         for i in range(n):
             x = random.randrange(self.largeur)
             y = random.randrange(self.hauteur)
             couleur = random.choice(couleurs)
-            taille = int(random.randrange(20, 50) / 2)
+            taille = int(random.randrange(80, 120) / 2)
             bille = Bille(self, x, y, taille, couleur)
             self.billes.append(bille)
 
@@ -153,12 +157,19 @@ class Controleur():
     def __init__(self):
         self.modele = Modele(self)
         self.vue = Vue(self, self.modele)
-        self.vue.root.after(100)
-        c.vue.root.mainloop()
-        self.vue.afficher_billes()
-        print(c, c.modele, c.vue)
+        self.boucler_jeu()
 
+    def boucler_jeu(self):
+        # Ici on a une boucle for qui déplace pixel par pixel (vitesse) 
+        # et ensuite affiche_billes et les cibles (pour le test) 
+        # tout cela avec une setTimeout de 10 milliseconde, 
+        # donc chaque 10 milliseconde on affiches le déplacement 
+        for bille in self.modele.billes:
+            bille.jouer_coup()
+        self.vue.afficher_billes()
+        self.vue.afficher_cibles()  
+        self.vue.root.after(1, self.boucler_jeu)
 
 if __name__ == '__main__':
     c = Controleur()
-
+    c.vue.root.mainloop()
