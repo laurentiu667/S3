@@ -5,18 +5,18 @@
     box-sizing: border-box;
 }
 
-body {
+body{
     font-family: Montserrat, sans-serif;
     height: 100vh;
     font-size: 17px;
   }
-:root {
+:root{
     --color-1: #ee7344; /* Footer Twitter link */
     --color-2: #74959a; /* Social login area background color */
     --color-3: #ffc85c; /* Social login buttons */
     --color-4: #ea5455; /* Login with email button */
 }
-.wrapper {
+.wrapperj{
     max-width: 960px;
     min-width: 220px;
     margin: 0 auto;
@@ -25,3 +25,4 @@ body {
     justify-content: center;
     background-color: var(--color-1);
   }
+
