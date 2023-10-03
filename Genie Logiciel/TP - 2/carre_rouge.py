@@ -1,48 +1,61 @@
 from tkinter import *
-
 import random
 
+class Carre():
+    def __init__(self):
+        self.largeur = 25
+        self.hauteur = 25
+        self.couleur = "red"
+
 class Vue():
-    def __init__(self,parent,modele):
-        self.parent = parent
+    def __init__(self, parent, modele):
+        self.vue = parent
         self.modele = modele
         self.root = Tk()
         self.creer_page_jeu()
-        
-    def creer_page_jeu(self):
-        self.cadre_jeu = Frame(self.root)
-        self.canevas = Canvas(self.cadre_jeu,
-                              width=self.modele.largeur, 
-                              height= self.modele.hauteur, 
-                              bg = "pink")
-        self.canevas.pack()
-        
+        self.canvas.bind("<B1-Motion>", self.deplacer_carre)
+
     def afficher_demarrage(self):
         self.cadre_jeu.pack()
-        self.afficher_carrer_rouge(self.modele.carrer_rouge)
-        
-    def afficher_carrer_rouge(self, carrer_rouge):
-        self.canevas.create_rectangle(carrer_rouge.x, carrer_rouge.y , carrer_rouge.x + 50, carrer_rouge.y + 50, fill= carrer_rouge.couleur)
-    
-class Carrer_rouge():
-    def __init__(self, modele):
-        self.modele = modele
-        self.x = self.modele.largeur / 4
-        self.y = self.modele.hauteur / 4
-        self.couleur = "red"
+
+    def creer_page_jeu(self):
+        self.cadre_jeu = Frame(self.root)
+        self.canvas = Canvas(self.cadre_jeu,
+                             width=self.modele.largeur,
+                             height=self.modele.hauteur,
+                             bg="pink")
+        self.canvas.pack()
+
+    def afficher_carre_rouge(self):
+        self.canvas.create_rectangle(self.modele.carre.largeur, 
+                                     self.modele.carre.hauteur, 
+                                     self.modele.carre.largeur + (self.modele.carre.largeur * 2),
+                                     self.modele.carre.hauteur + (self.modele.carre.hauteur * 2),
+                                     fill=self.modele.carre.couleur,
+                                     tags="carre_rouge")
+
+    def deplacer_carre(self, event=None):
+        self.canvas.delete(ALL)
+        if event:
+            self.canvas.create_rectangle(event.x - self.modele.carre.largeur,
+                                         event.y - self.modele.carre.hauteur,
+                                         event.x + self.modele.carre.largeur,
+                                         event.y + self.modele.carre.hauteur,
+                                         fill=self.modele.carre.couleur)
 
 class Modele():
-    def __init__(self,parent):
-        self.parent = parent
-        self.hauteur = 800
-        self.largeur = 1200
-        self.carrer_rouge = Carrer_rouge(self)
-        
+    def __init__(self, parent):
+        self.modele = parent # controleur
+        self.largeur = 800
+        self.hauteur = 1200
+        self.carre = Carre()
+
 class Controleur():
-    def __init__(self):
+    def __init__(self): # sert à ajouter des attributs à l'objet
         self.modele = Modele(self)
-        self.vue = Vue(self,self.modele)
+        self.vue = Vue(self, self.modele)
         self.vue.afficher_demarrage()
+        self.vue.afficher_carre_rouge()
         self.vue.root.mainloop()
 
 if __name__ == '__main__':
