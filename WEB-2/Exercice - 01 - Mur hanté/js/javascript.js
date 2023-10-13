@@ -1,20 +1,17 @@
 let spriteList = [];
 
 window.addEventListener("load", () => {
-    for (let i = 0; i < 6; i++) {
-        spriteList.push(new Frame("frame-" + i + "evil"));
+    for (let i = 1; i <= 6; i++) {
+        // Utilisez l'ID correct pour chaque image diabolique
+        spriteList.push(new Frame("frame-" + i + "-evil"));
     }
-   
-
     tick();
-})
+});
 
 const tick = () => {
     for (let i = 0; i < spriteList.length; i++) {
-        const node = spriteList[i];
-        node.tick(); // node.tick fait reference dans la classe Ball.js
-        
+        const frame = spriteList[i];
+        frame.tick();
     }
-    window.requestAnimationFrame(tick) // prends le refreshrRate de l ecran donc 60 fois par seconde sur mon ecran
-
-}
+    window.requestAnimationFrame(tick);
+};
