@@ -8,7 +8,7 @@ public class Controle {
 
 
     public static boolean verifNom(Enregistrement nom){
-
+        return false;
     }
 
     public static boolean verifMdp(Enregistrement mdp){

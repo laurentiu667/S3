@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbd3f0d3-7111-4d83-84aa-a0cfcf8ce3b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Genie Logiciel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Genie Logiciel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Philosophie/DEVOIR_5_texte_de_MM_Egger.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Philosophie/DEVOIR_5_texte_de_MM_Egger.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB-2/Exercice - 01 - Mur hanté/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB-2/Exercice - 01 - Mur hanté/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB-2/Exercice - 01 - Mur hanté/js/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB-2/Exercice - 01 - Mur hanté/js/javascript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WEB-2/Exercice - 01 - Mur hanté/js/sprites/Frame.js" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB-2/Exercice - 01 - Mur hanté/js/sprites/Frame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP - 2/carre_rouge.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP - 2/carre_rouge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/production/D03A_JUnit_Etudiants/application/AppPlats.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/production/D03A_JUnit_Etudiants/application/AppPlats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/production/D03A_JUnit_Etudiants/plats_prepares/Plat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/production/D03A_JUnit_Etudiants/plats_prepares/Plat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/test/D03A_JUnit_Etudiants/PlatTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/test/D03A_JUnit_Etudiants/PlatTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/L02D-ModificateursNonAcces/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/L02D-ModificateursNonAcces/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/L03F_Joueur_Etudiants/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/L03F_Joueur_Etudiants/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/Laboratoire 02E/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Laboratoire 02E/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/Laboratoire 02E/src/Controle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Laboratoire 02E/src/Controle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +44,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="X:\S3\Genie Logiciel\pythonProject1" />
