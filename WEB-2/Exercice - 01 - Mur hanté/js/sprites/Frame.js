@@ -3,7 +3,7 @@ class Frame {
         this.id = id;
         this.node = document.querySelector("#" + this.id);
         this.opacity = 0.0; // Initialisez l'opacité à 0
-        this.speed = 0.009; // Initialisez la vitesse
+        this.speed = 0.05; // Initialisez la vitesse
 
         this.node.onmouseover = () => {
             this.speed = -this.speed;

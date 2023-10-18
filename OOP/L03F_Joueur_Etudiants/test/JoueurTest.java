@@ -1,21 +1,9 @@
+import jeu.Joueur;
 import org.junit.jupiter.api.*;
-
 import static org.junit.jupiter.api.Assertions.*;
+public class JoueurTest {
 
-import plats_prepares.Plat;
-import plats_prepares.Plat.*;
-
-public class PlatTest {
-    Plat platTest;
-    @Test
-    public void testNomEstValide(){
-        assertEquals(true, this.platTest.isNomValide("Lasagne"));
-    }
-
-    @BeforeEach
-    public void avantChaqueTest(){
-        platTest = new Plat("Lasagne", 430, 350, 40 ,7.92, 9.99);
-    }
+    Joueur joueurTest;
 
     @BeforeAll
     public static void setup(){
@@ -23,7 +11,6 @@ public class PlatTest {
         System.out.println("= DÉBUT DES TESTS =");
         System.out.println("===================");
     }
-
     @AfterAll
     public static void finTests(){
         System.out.println("=================");
@@ -36,12 +23,16 @@ public class PlatTest {
         System.out.println("= Test complété =");
     }
 
+    @BeforeEach
+    public void initJoueur(){
+        this.joueurTest = new Joueur("Laurentiu", 200, 20, "Couteau", 2, "Diamant", 2);
+    }
+
     @Test
-    public void testSetPrix(){
-        this.platTest.setPrix(11.99);
-        assertEquals(11.99, this.platTest.getPrix());
+    public void testgetCredit(){
+        this.joueurTest.setCredits(1000);
+        assertEquals(1000, this.joueurTest.getCredits());
     }
 
 
 }
-

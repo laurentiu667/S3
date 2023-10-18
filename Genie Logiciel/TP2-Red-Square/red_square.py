@@ -26,7 +26,7 @@ class Vue():
         self.cadre_jeu.pack()
 
     def creer_page_jeu(self):
-        self.cadre_jeu = Frame(self.root, width=800, height=800, borderwidth=40, bg="black")
+        self.cadre_jeu = Frame(self.root, width=800, height=800, borderwidth=50, bg="black")
         self.cadre_jeu.pack()
 
         self.canvas = Canvas(self.cadre_jeu, width=450, height=450, bg="white")
@@ -71,7 +71,7 @@ class Vue():
                  Pion(35, 390, 65, 450, "blue"), Pion(350, 380, 450, 400, "blue")]
 
         for pion in pions:
-            self.canvas.create_rectangle(pion.x1, pion.y1, pion.x2, pion.y2, fill=pion.couleur)
+            self.canvas.create_rectangle(pion.x1, pion.y1, pion.x2, pion.y2, fill=pion.couleur, tags="pions")
 
 class Modele():
     def __init__(self, parent):
