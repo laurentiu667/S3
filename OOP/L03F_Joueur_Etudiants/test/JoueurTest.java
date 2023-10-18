@@ -25,13 +25,29 @@ public class JoueurTest {
 
     @BeforeEach
     public void initJoueur(){
-        this.joueurTest = new Joueur("Laurentiu", 200, 20, "Couteau", 2, "Diamant", 2);
+        this.joueurTest = new Joueur("Laurentiu", 1000, 20, "Couteau", 2, "Diamant", 2);
     }
 
-    @Test
-    public void testgetCredit(){
+    @Test  // Test 1.
+    public void testGetCredits(){
         this.joueurTest.setCredits(1000);
-        assertEquals(1000, this.joueurTest.getCredits());
+        assertEquals(1000, joueurTest.getCredits());
+    }
+
+
+    @Test // Test 2.a
+    public void testCoutAmeliorerArmureNiveauPositif(){
+        assertEquals(30, joueurTest.coutAmeliorerArmure(10));
+    }
+
+    @Test  // Test 2.b
+    public void testCoutAmeliorerArmureNiveauNul(){
+        assertEquals(0, joueurTest.coutAmeliorerArmure(0));
+    }
+
+    @Test // Test 2.c
+    public void testCoutAmeliorerArmureNiveauNegatif(){
+        assertEquals(30, joueurTest.coutAmeliorerArmure(-10));
     }
 
 
