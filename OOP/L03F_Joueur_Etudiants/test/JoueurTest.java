@@ -30,25 +30,19 @@ public class JoueurTest {
 
     @Test  // Test 1.
     public void testGetCredits(){
-        this.joueurTest.setCredits(1000);
         assertEquals(1000, joueurTest.getCredits());
     }
 
-
-    @Test // Test 2.a
-    public void testCoutAmeliorerArmureNiveauPositif(){
+    @Test
+    public void testCoutAmeliorerArmure() {
+        // Test 2.a
         assertEquals(30, joueurTest.coutAmeliorerArmure(10));
-    }
 
-    @Test  // Test 2.b
-    public void testCoutAmeliorerArmureNiveauNul(){
+        // Test 2.b
         assertEquals(0, joueurTest.coutAmeliorerArmure(0));
-    }
 
-    @Test // Test 2.c
-    public void testCoutAmeliorerArmureNiveauNegatif(){
+        // Test 2.c
         assertEquals(30, joueurTest.coutAmeliorerArmure(-10));
     }
-
 
 }
