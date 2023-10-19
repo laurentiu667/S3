@@ -7,6 +7,14 @@ class Carre():
         self.variation = 0
         self.couleur = "red"
 
+    def collision_bordure(self, canvas_width, canvas_height, x, y):
+        x1 = x - self.largeur
+        y1 = y - self.hauteur
+        x2 = x + self.largeur
+        y2 = y + self.hauteur
+
+        return x1 < 0 or x2 > canvas_width or y1 < 0 or y2 > canvas_height
+
 class Pion():
     def __init__(self, x1, y1, x2, y2, couleur):
         self.x1 = x1
@@ -15,26 +23,51 @@ class Pion():
         self.y2 = y2
         self.couleur = couleur
 
+    def collision_carre_rouge(self, x, y, largeur):
+        carre_x1 = x - largeur
+        carre_x2 = x + largeur
+        carre_y1 = y - largeur
+        carre_y2 = y + largeur
+
+        return self.x1 <= carre_x2 and carre_x1 <= self.x2 and self.y1 <= carre_y2 and carre_y1 <= self.y2
+
+
 class Vue():
     def __init__(self, parent, modele):
         self.vue = parent
         self.modele = modele
         self.root = Tk()
         self.creer_page_jeu()
-        self.canvas.bind("<B1-Motion>", self.deplacer_carre)
 
     def afficher_demarrage(self):
         self.cadre_jeu.pack()
 
     def creer_page_jeu(self):
-        self.cadre_jeu = Frame(self.root, width=800, height=800, borderwidth=40, bg="black")
+        self.cadre_jeu = Frame(self.root, borderwidth=40, bg="black")
         self.cadre_jeu.pack()
 
         self.canvas = Canvas(self.cadre_jeu, width=450, height=450, bg="white")
         self.canvas.pack()
 
-    def afficher_carre_rouge(self):
+        self.canvas.bind("<B1-Motion>", self.deplacer_carre)
+        self.afficher_carre_rouge()
+        self.afficher_pions()
+        self.root.mainloop()
 
+    def creer_interface_utilisateur(self):
+        cadre_interface = Frame(self.root, bg="white")
+        cadre_interface.pack(side=RIGHT)
+
+        label_username = Label(cadre_interface, text="Username:")
+        label_username.pack()
+
+        self.username_entry = Entry(cadre_interface)
+        self.username_entry.pack()
+
+        bouton_valider = Button(cadre_interface, text="Valider", command=self.afficher_nom_joueur)
+        bouton_valider.pack()
+
+    def afficher_carre_rouge(self):
         x = (self.canvas.winfo_reqwidth() - self.modele.carre.largeur) / 2
         y = (self.canvas.winfo_reqheight() - self.modele.carre.hauteur) / 2
 
@@ -45,59 +78,45 @@ class Vue():
                                      fill=self.modele.carre.couleur,
                                      tags="carre_rouge")
 
-    def contact_carre_rouge_bordure(self):
-        x1, y1, x2, y2 = self.canvas.coords("carre_rouge")
-        canvas_width = self.canvas.winfo_reqwidth()
-        canvas_height = self.canvas.winfo_reqheight()
-
-
-        # contact avec bordure
-        if x1 <= 0 or x2 >= canvas_width or y1 <= 0 or y2 >= canvas_height:
-            self.root.quit()
-        if  40 <= x2 and x1 <= 100 and 40 <= y2 and y1 <= 100:
-            self.root.quit()
-        if  340 <= x2 and x1 <= 400 and 35 <= y2 and y1 <= 85:
-            self.root.quit()
-        if  35 <= x2 and x1 <= 65 and 390 <= y2 and y1 <= 450:
-            self.root.quit()
-        if  360 <= x2 and x1 <= 400 and 380 <= y2 and y1 <= 400:
-            self.root.quit()
-
-    def contact_pions_carre_rouge(self):
-        pass
     def deplacer_carre(self, event=None):
         self.canvas.delete("carre_rouge")
         if event:
-            self.canvas.create_rectangle(event.x - self.modele.carre.largeur,
-                                         event.y - self.modele.carre.hauteur,
-                                         event.x + self.modele.carre.largeur,
-                                         event.y + self.modele.carre.hauteur,
+            x = event.x
+            y = event.y
+
+            if self.modele.carre.collision_bordure(self.canvas.winfo_reqwidth(), self.canvas.winfo_reqheight(), x, y):
+                self.root.quit()
+
+            for pion in self.modele.pions:
+                if pion.collision_carre_rouge(x, y, self.modele.carre.largeur):
+                    self.root.quit()
+
+            self.canvas.create_rectangle(x - self.modele.carre.largeur,
+                                         y - self.modele.carre.hauteur,
+                                         x + self.modele.carre.largeur,
+                                         y + self.modele.carre.hauteur,
                                          fill=self.modele.carre.couleur,
                                          tags="carre_rouge")
-            self.contact_carre_rouge_bordure()
 
     def afficher_pions(self):
-        pions = [Pion(40, 40, 100, 100, "blue"), Pion(340, 35, 400, 85, "blue"),
-                 Pion(35, 390, 65, 450, "blue"), Pion(360, 380, 400, 400, "blue")]
-
-        for pion in pions:
+        for pion in self.modele.pions:
             self.canvas.create_rectangle(pion.x1, pion.y1, pion.x2, pion.y2, fill=pion.couleur)
+
 
 class Modele():
     def __init__(self, parent):
-        self.modele = parent  # controleur
+        self.modele = parent  # Contrôleur
         self.largeur = 800
         self.hauteur = 800
         self.carre = Carre()
+        self.pions = [Pion(40, 40, 100, 100, "blue"), Pion(340, 35, 400, 85, "blue"),
+                     Pion(35, 390, 65, 450, "blue"), Pion(360, 380, 400, 400, "blue")]
 
 class Controleur():
     def __init__(self):
         self.modele = Modele(self)
         self.vue = Vue(self, self.modele)
         self.vue.afficher_demarrage()
-        self.vue.afficher_carre_rouge()
-        self.vue.afficher_pions()
-        self.vue.root.mainloop()
 
 if __name__ == '__main__':
     c = Controleur()
