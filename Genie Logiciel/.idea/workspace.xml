@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbd3f0d3-7111-4d83-84aa-a0cfcf8ce3b3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP - 2/carre_rouge.py" beforeDir="false" afterPath="$PROJECT_DIR$/TP - 2/carre_rouge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants.zip" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu-Dilion/src/test_chaine/TestChaine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu-Dilion/src/validations_speciales/Validation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu-Dilion/testPremierContract/PremierContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu_Dilion/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu_Dilion/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu_Dilion/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu_Dilion/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu_Dilion/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/C34_TP3_Laurentiu_Dilion/C34_TP3_Laurentiu_Dilion.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/production/D03A_JUnit_Etudiants/application/AppPlats.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/production/D03A_JUnit_Etudiants/application/AppPlats.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/production/D03A_JUnit_Etudiants/plats_prepares/Plat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/production/D03A_JUnit_Etudiants/plats_prepares/Plat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/test/D03A_JUnit_Etudiants/PlatTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/D03A_JUnit_Etudiants/out/test/D03A_JUnit_Etudiants/PlatTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/L02D-ModificateursNonAcces/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/L02D-ModificateursNonAcces/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/L03F_Joueur_Etudiants/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/L03F_Joueur_Etudiants/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/Laboratoire 02E/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Laboratoire 02E/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/Laboratoire 02E/src/Controle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Laboratoire 02E/src/Controle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/ouaiouaihashish/Desktop/S3/Genie Logiciel/TP2-Red-Square"
   }
 }]]></component>
   <component name="RecentsManager">
