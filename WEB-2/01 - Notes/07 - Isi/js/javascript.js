@@ -14,20 +14,12 @@ window.addEventListener("load", () =>{
 
             let parentNode = document.querySelector("#memo-list"); // ul ou #liste
             parentNode.append(node);
+
+            input.value = "";
+
+            node.onclick = () => node.remove();
         }
-       
     }
-
-    const supprimer = () =>{
-        let node = document.querySelector("#memo-entry");
-        node
-    }
-
-    input.addEventListener("click", () =>{
-
-    })
-    
-
     
     /*
     inputNode.onkeyup = event => {

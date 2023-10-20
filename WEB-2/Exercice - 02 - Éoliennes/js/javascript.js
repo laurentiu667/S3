@@ -2,7 +2,7 @@ let sprite = [];
 
 window.addEventListener("load", () => {
     for (let i = 1; i <= 3; i++) {
-        sprite.push(new Frame("square"));
+        sprite.push(new Frame("blades" + i));
     }
     
     tick();
