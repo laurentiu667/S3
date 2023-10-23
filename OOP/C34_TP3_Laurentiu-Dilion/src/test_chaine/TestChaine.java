@@ -18,7 +18,7 @@ public class TestChaine {
         String telephone5 = "(000)000-0000";
         String telephone6 = "(000) 000-0000";
         String telephone7 = "[000]000-0000";
-        String telephone8 = "[000) 000-0000";
+        String telephone8 = "[456] 789-0123";
 
 
         boolean codeClientValide1 = Validation.validerCodeClient(codeClient1);

@@ -44,10 +44,12 @@ public class ChiffrementChaine {
             return "";
         }
         StringBuilder chaineChiffree = new StringBuilder();
-        for (char caractere : chaineAchiffrer.toCharArray()) {
+        char[] caracteres = chaineAchiffrer.toCharArray();
+        for (int i = 0; i < caracteres.length; i++) {
+            char caractere = caracteres[i];
             // Conversion du char en ASCII
             int codeASCII = (int) caractere;
-            // Ajouter la cle de chiffrement
+            // Ajouter la clé de chiffrement
             int nouveauCodeASCII = codeASCII + cleChiffrement;
             // Reconvertir en caractère
             char caractereChiffre = (char) nouveauCodeASCII;
@@ -58,8 +60,7 @@ public class ChiffrementChaine {
     }
     public String dechiffrer(String chaineADechiffrer, int cleChiffrement) {
         StringBuilder chaineDechiffrer = new StringBuilder();
-
-        if (this.cleChiffrement >= -10 && this.cleChiffrement <= 100) {
+        if (cleChiffrement >= -10 && cleChiffrement <= 100) {
             for (char caractere : chaineADechiffrer.toCharArray()) {
                 // Conversion du char en ASCII
                 int codeASCII = (int) caractere;

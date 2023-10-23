@@ -6,8 +6,7 @@ public class Validation {
     // Vos champs constants pour les REGEX
     private static final String CODE_CLIENT_REGEX = "^[a-zA-Z]{3}\\d{8}[#*]{0,1}$";
     private static final String NUMERO_DE_SERIE_REGEX = "^[a-zA-Z]{3,8}\\d{6}-\\S$";
-    private static final String TELEPHONE_REGEX = "^(\\(\\d{3}\\)|\\[\\d{3}\\]|\\d{3})[- ]?\\d{3}[- ]?\\d{4}$";
-
+    private static final String TELEPHONE_REGEX = "^(\\[\\d{3}]|\\(\\d{3}\\)|\\d{3})[- ]?\\d{3}[- ]?\\d{4}$";
 
     public static boolean validerCodeClient(String chaine) {
         Pattern p = Pattern.compile(CODE_CLIENT_REGEX);
